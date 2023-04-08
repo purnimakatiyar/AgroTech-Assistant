@@ -19,6 +19,33 @@ def supplier_login(request):
     
     # If GET request or authentication failed, show login form
     return render(request, 'supplier_login.html', {'form': UserCreationForm()})
+def farmer_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('farmer_dashboard')
+        else:
+            messages.error(request, 'Invalid login credentials')
+    
+    # If GET request or authentication failed, show login form
+    return render(request, 'farmer_login.html', {'form': UserCreationForm()})
+
+def admin_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('admin_dashboard')
+        else:
+            messages.error(request, 'Invalid login credentials')
+    
+    # If GET request or authentication failed, show login form
+    return render(request, 'admin_login.html', {'form': UserCreationForm()})
 
 def supplier_register(request):
     if request.method == 'POST':
