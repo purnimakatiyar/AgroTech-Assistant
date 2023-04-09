@@ -17,7 +17,7 @@
         </script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -28,12 +28,9 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Info</a>
-            </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'landing_page' %}">Contact Us <span class="sr-only">(current)</span></a>
-              </li>
+              <a class="nav-link" href="#">Info <span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Login
@@ -44,18 +41,37 @@
                 <a class="dropdown-item" href="admin/login/">Admin Login</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'landing_page' %}">Contact Us <span class="sr-only">(current)</span></a>
+              </li>
+            
+            
           </ul>
           
         </div>
       </nav>
     
-    <h1>Welcome to Agrotech Assistant</h1>
-    
+    <h1 id="typewriter"></h1>
+
     <p>We're here to help farmers improve their yields and profitability. Our platform provides access to the latest weather information, government schemes, and tools for buying and selling crops. Sign up today to join our community!</p>
-    
+ 
     <button>Sign Up</button>
+    
+
+<script>
+  var i = 0;
+  var txt = 'Welcome to Agrotech Assistant';
+  var speed = 50;
+
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("typewriter").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  setTimeout(typeWriter, 1000);
+</script>
   </body>
 </html>
