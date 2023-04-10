@@ -81,7 +81,7 @@ body::before {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  filter: brightness(50%);
+  filter: brightness(70%);
 }
 
 @media screen and (max-width: 767px) {

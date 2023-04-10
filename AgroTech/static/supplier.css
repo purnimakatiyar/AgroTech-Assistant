@@ -54,3 +54,22 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+.navbar-right{
+  display: flex;
+  justify-content: flex-end;
+}
+nav {
+  background-color: black;
+}
+
+nav a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background-color: black;
+}
