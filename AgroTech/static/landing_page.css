@@ -263,80 +263,69 @@ body {
   margin-bottom: 20px; /* add margin to create spacing */
 }
 
+/* Contact Us Section */
 #contact-us {
 
   padding: 50px 0;
-}
-
-#contact-us h2 {
-  font-size: 32px;
+  }
+  #contact-us h2 {
+    color:rgb(80, 202, 98);
   margin-bottom: 30px;
-  text-align: center;
-}
-
-#contact-us p {
-  font-size: 18px;
+  }
+  #contact-us p {
+  color: white;
   margin-bottom: 30px;
-  text-align: center;
-}
-
-#contact-us .form-group label {
   font-size: 18px;
-  font-weight: bold;
-}
-
-#contact-us .form-control {
-  font-size: 16px;
+  line-height: 1.5;
+  }
+  #contact-us .form-group {
+  margin-bottom: 20px;
+  }
+  #contact-us label {
+  font-size: 18px;
+  color: rgb(80, 202, 98);
+  font-weight: 500;
+  margin-bottom: 10px;
+  }
+  #contact-us input[type="text"],
+  #contact-us input[type="email"],
+  #contact-us textarea {
+  border: 1px solid #ccc;
   padding: 10px;
-}
-
-#contact-us button {
-  margin-top: 20px;
-}
-
-#contact-us h4 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-#contact-us p {
   font-size: 16px;
+  color: #333;
   margin-bottom: 20px;
-}
-
-.social-media-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.social-media-list li {
-  margin-right: 10px;
-}
-
-.social-media-list a {
-  background-color: #444;
-  border-radius: 50%;
+  width: 100%;
+  border-radius: 5px;
+  }
+  #contact-us input[type="submit"] {
+  background-color: #333;
   color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  }
+  #contact-us input[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  cursor: pointer;
+  }
+  
+  
+  
+  
+
+.team-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 50px;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
+  size: 10px;
+  margin-left: 90px;
+
 }
 
-.social-media-list a:hover {
-  background-color: #3b5998;
-}
-
-
-.team-img{
-  padding-right:190px;
-}
 
 #about-us {
   /* background-color: black; */
@@ -387,15 +376,10 @@ body {
   text-shadow: 2px 2px 4px #000000;
   color:rgb(243, 244, 245);
   padding: 50px 0;
+  font-size: medium;
 }
 
-#meet-the-team h2 {
-  text-shadow: 2px 2px 4px #000000;
-  color:rgb(80, 202, 98);
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 20px;
-}
+
 
 
 /* .team-member {
@@ -404,8 +388,11 @@ body {
 }*/
 
 .team-info{
- margin-top: 15px;
+
+ font-size: 15px;
+margin-left: 70px;
 }
+
 .f2{
  
   text-shadow: 2px 2px 4px #000000;
@@ -413,10 +400,22 @@ body {
   font-size: 36px;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .f2:hover {
   background-color: black;
 }
+.f1:hover {
+  background-color: black;
+}
+.f3:hover {
+  background-color: black;
+}
+
+.rounded {
+  border-radius: 50px!important;
+}
+
 /*
 .team-img img {
   width: 100%;
@@ -437,3 +436,38 @@ body {
     margin-bottom: 20px;
   }
 }  */
+.card {
+  transition: all 0.3s ease;
+  background-color: black;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+ 
+}
+
+.card-title {
+  color: #007bff;
+}
+
+.card-text {
+  color: white;
+  font-size: 15px;
+
+}
+
+#neww{
+  display: flex;
+  justify-content: center;
+}
+#newww{
+  background-color: #000000;
+}
+#newww:hover{
+  background-color: rgb(16, 92, 27);
+}
+
+#lb{
+padding-top: 0px;
+}
