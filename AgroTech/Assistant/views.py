@@ -134,3 +134,6 @@ def PMKSN(request):
     return render(request,'PMKSN.html')
 def PMKSY(request):
     return render(request,'PMKSY.html')
+
+def weather(request):
+    return render(request, 'weather.html')

@@ -28,4 +28,7 @@ urlpatterns = [
     path("PMFBY",views.PMFBY,name='PMFBY'),
     path("PMKSN",views.PMKSN,name='PMKSN'),
     path("PMKSY",views.PMKSY,name='PMKSY'),
+    path("weather",views.weather,name='weather'),
+
+    
 ]

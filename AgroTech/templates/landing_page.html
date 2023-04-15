@@ -51,9 +51,21 @@
               </div>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="contact-us">Contact Us <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#contact-us">Contact Us <span class="sr-only">(current)</span></a>
               </li>
             
+              <li class="nav-item active">
+                <div id="google_translate_element"></div>
+                <script>
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                            {pageLanguage: 'en'},
+                            'google_translate_element'
+                        );
+                    }
+                </script>
+                <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+              </li>
             
           </ul>
           
@@ -199,7 +211,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col" >
     <div class="card h-80 m-5" style="width: 20rem" size="80%" id="newww" >
-      <a class="card-block stretched-link text-decoration-none" href="/">
+      <a class="card-block stretched-link text-decoration-none" href="weather" target="_blank">
       <img src="/media/weather_og.png" class="card-img-top" alt="..."  height="160px">
       <div class="card-body">
         <h5 class="card-title">Weather</h5>
@@ -210,7 +222,7 @@
   </div>
   <div class="col">
     <div class="card h-80 m-5" style="width: 20rem" size="80%" id="newww">
-      <a class="card-block stretched-link text-decoration-none" href="/">
+      <a class="card-block stretched-link text-decoration-none" href="https://kisanrath.nic.in/" target="_blank">
       <img src="/media/transport.jpg" class="card-img-top" alt="..." height="160px">
       <div class="card-body">
         <h5 class="card-title">Transport</h5>
@@ -221,7 +233,7 @@
   </div>
   <div class="col">
     <div class="card h-90 m-5" style="width: 20rem" size="80%" id="newww">
-      <a class="card-block stretched-link text-decoration-none" href="index">
+      <a class="card-block stretched-link text-decoration-none" href="index" target="_blank">
       <img src="/media/schemes.webp" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Government Schemes</h5>
