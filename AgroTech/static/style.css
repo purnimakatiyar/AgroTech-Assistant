@@ -1,0 +1,57 @@
+/* Reset default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set body background color and font */
+  body {
+    background-color: #16da16;
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1620200423727-8127f75d7f53?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Set container styles */
+  .scheme-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+     
+  }
+  
+  /* Style headings */
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #073b09;
+
+  }
+  
+  h2 {
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style paragraphs */
+  p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  /* Add hover effect for scheme containers */
+  .scheme-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Add cursor pointer for scheme containers */
+  .scheme-container {
+    cursor: pointer;
+  }
+  

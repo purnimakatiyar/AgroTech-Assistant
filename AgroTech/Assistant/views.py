@@ -108,3 +108,29 @@ def supplier(request):
 
 def PlaceOrder(request):
     return render(request,'PlaceOrder.html')
+def index(request):
+    return render(request,'index.html')
+
+
+def AIF(request):
+    return render(request,'AIF.html')
+def CFFF(request):
+    return render(request,'CFFF.html')
+def CIS(request):
+    return render(request,'CIS.html')
+def KMDY(request):
+    return render(request,'KMDY.html')
+def Krishi(request):
+    return render(request,'Krishi.html')
+def MAS(request):
+    return render(request,'MAS.html')
+def NMOEO(request):
+    return render(request,'NMOEO.html')
+def NMONF(request):
+    return render(request,'NMONF.html')
+def PMFBY(request):
+    return render(request,'PMFBY.html')
+def PMKSN(request):
+    return render(request,'PMKSN.html')
+def PMKSY(request):
+    return render(request,'PMKSY.html')
