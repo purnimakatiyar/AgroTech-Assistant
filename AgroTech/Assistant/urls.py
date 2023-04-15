@@ -15,4 +15,17 @@ urlpatterns = [
     path("Sppsignout",views.Sppsignout,name='Sppsignout'),
     path("supplier",views.supplier,name='supplier'),
     path("PlaceOrder",views.PlaceOrder,name='PlaceOrder'),
+    path("index",views.index,name='index'),
+    
+    path("AIF",views.AIF,name='AIF'),
+    path("CFFF",views.CFFF,name='CFFF'),
+    path("CIS",views.CIS,name='CIS'),
+    path("KMDY",views.KMDY,name='KMDY'),
+    path("Krishi",views.Krishi,name='Krishi'),
+    path("MAS",views.MAS,name='MAS'),
+    path("NMOEO",views.NMOEO,name='NMOEO'),
+    path("NMONF",views.NMONF,name='NMONF'),
+    path("PMFBY",views.PMFBY,name='PMFBY'),
+    path("PMKSN",views.PMKSN,name='PMKSN'),
+    path("PMKSY",views.PMKSY,name='PMKSY'),
 ]
