@@ -1,0 +1,73 @@
+{% extends 'farmerbase.html' %}
+
+{% block title %}FarmerOrder
+{% endblock title %}
+
+{% block style %}
+body {
+    background-image: url('https://static.businessworld.in/article/article_extra_large_image/1594113196_DUYgeA_Agritech_FINAL.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .bn{
+    padding: 6px 9px;
+    margin: 3px 6px;
+  }
+  .tt{
+    display : flex;
+  }
+{% endblock style %}
+
+{% block body %}
+<h1 class="text-center my-3">Supplier Order</h1>
+<h1 class="text-center my-3">List of Orders</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#SNo.</th>
+                                <th>Name</th>
+                                <th>E-mail</th>
+                                <th>Phone Number</th>
+                                <th>Crop Name</th>
+                                <th>Crop Quantity</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Zip</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ord in FarmerOrder %}
+                            <tr>
+                                <td>{{ord.id}}</td>
+                                <td>{{ord.name}}</td>
+                                <td>{{ord.email}}</td>
+                                <td>{{ord.phone}}</td>
+                                <td>{{ord.crop_name}}</td>
+                                <td>{{ord.crop_quantity}}</td>
+                                <td>{{ord.address}}</td>
+                                <td>{{ord.city}}</td>
+                                <td>{{ord.state}}</td>
+                                <td>{{ord.zip}}</td>
+                                <td class="tt">
+                                    <button class="btn btn-danger btn-sm bn">Chat with the Supplier</button>
+                                    <button class="btn btn-dark btn-sm bn">Accept</button>
+                                </td>
+
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

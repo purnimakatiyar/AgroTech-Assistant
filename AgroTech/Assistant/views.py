@@ -7,6 +7,8 @@ from datetime import datetime
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth
+from Assistant.models import Sgn
+from Assistant.models import Suppsgn,SupplierOrder
 
 
 def landing_page(request):
@@ -43,6 +45,9 @@ def signup(request):
             myuser.last_name=lname
 
             myuser.save()
+
+            signup = Sgn(username=username,fname=fname,lname=lname, email=email,address=address,date = datetime.today())
+            signup.save()
             messages.success(request,"You are successfully registered.")
             return redirect('signin')
     return render(request,'signup.html')
@@ -60,28 +65,39 @@ def signin(request):
             return redirect('farmerDashboard')            #{'fname': fname}
         else:
             messages.error(request,"Bad Credentials!")
-            return redirect('about')
+            return redirect('signin')
     return render(request,'signin.html')
 
 def signout(request):
     logout(request)
     messages.success(request, "Logged Out Successfully")
-    return redirect('about')
+    return redirect('signin')
 
 def farmerDashboard(request):
     return render(request,'farmerDashboard.html')
 
+def FarmOrder(request):
+    FarmerOrder = SupplierOrder.objects.all()
+    return render(request,'FarmOrder.html',{'FarmerOrder': FarmerOrder})
+
 def suppliersignup(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        email=request.POST.get('email')
-        pass1=request.POST.get('pass1')
-        pass2=request.POST.get('pass2')
+        username = request.POST['username']
+        fname = request.POST['fname']
+        lname = request.POST['lname']
+        email=request.POST['email']
+        phone = request.POST['phone']
+        address = request.POST['address']
+        pass1=request.POST['pass1']
+        pass2=request.POST['pass2']
         if pass1!=pass2:
             return HttpResponse("Your password and confrom password are not Same!!")
         else:
             my_user=User.objects.create_user(username,email,pass1)
             my_user.save()
+
+            suppliersignup = Suppsgn(username=username,fname=fname,lname=lname,email=email,phone=phone, address=address,date = datetime.today())
+            suppliersignup.save()
             return redirect('suppliersignin')
     return render(request,'suppliersignup.html')
 
@@ -101,15 +117,39 @@ def suppliersignin(request):
 def Sppsignout(request):
     logout(request)
     messages.success(request, "Logged Out Successfully")
-    return redirect('supplierabout')
+    return redirect('suppliersignin')
 
 def supplier(request):
     return render(request,'supplier.html')
 
 def PlaceOrder(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email=request.POST.get('email')
+        phone = request.POST.get('phone')
+        cropName = request.POST.get('cropName')
+        cropQuantity = request.POST.get('cropQuantity')
+        address = request.POST.get('address')
+        city=request.POST.get('city')
+        state=request.POST.get('state')
+        zip=request.POST.get('zip')
+          
+        PlaceOrder = SupplierOrder()
+        PlaceOrder.name = name
+        PlaceOrder.email = email
+        PlaceOrder.phone = phone
+        PlaceOrder.crop_name = cropName
+        PlaceOrder.crop_quantity = cropQuantity
+        PlaceOrder.address = address
+        PlaceOrder.city = city
+        PlaceOrder.state = state
+        PlaceOrder.zip = zip
+        PlaceOrder.date = datetime.today()
+
+        PlaceOrder.save()
+        messages.success(request,"Your Order is being placed successfully, now wait for farmer's response")
+        return redirect('supplier')
     return render(request,'PlaceOrder.html')
-def index(request):
-    return render(request,'index.html')
 
 
 def AIF(request):
@@ -137,3 +177,6 @@ def PMKSY(request):
 
 def weather(request):
     return render(request, 'weather.html')
+
+def index(request):
+    return render(request, 'index.html')
