@@ -180,3 +180,7 @@ def weather(request):
 
 def index(request):
     return render(request, 'index.html')
+
+def YourOrder(request):
+    FarmerOrder = SupplierOrder.objects.all()
+    return render(request,'YourOrder.html',{'FarmerOrder': FarmerOrder})
