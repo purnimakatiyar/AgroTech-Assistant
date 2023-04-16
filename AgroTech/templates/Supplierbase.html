@@ -14,28 +14,27 @@
     {% comment %} <style> {% block style %}{% endblock style %} </style> {% endcomment %}
 
     <style>
-        {% comment %} body {
+      body {
           background-image: url('https://static.businessworld.in/article/article_extra_large_image/1594113196_DUYgeA_Agritech_FINAL.jpg');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: cover;
-        } {% endcomment %}
-
-        {% block style %}{% endblock style %}
-        #navbarSupportedContent{
-            position: absolute;
-            right: 28px;
-        }
-
-        .nav-item{
-            margin: 2px 4px;
-        }
+        } 
+      #navbarSupportedContent{
+          position: absolute;
+          right: 28px;
+      }
+      {% block style %}
+      {% endblock style %}
+      .nav-item{
+          margin: 2px 4px;
+      }
     </style>
   </head>
   <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">FASSISTANT</a>
+      <a class="navbar-brand" href="#">Agro-ASSISTANT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -44,31 +43,16 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          {% comment %} <li class="nav-item">
-            <a class="nav-link" href="#">Marketplace</a>
-          </li> {% endcomment %}
           <li class="nav-item">
             <a class="nav-link" href="https://khetigaadi.com/shop/en">Tools</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="PlaceOrder">Place Order</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/supplier" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Your Order
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/contact">Action</a>
-              <a class="dropdown-item" href="/contact">Another action</a>
-              <div class="dropdown-divider">
-              <a class="dropdown-item" href="/contact">Something else here</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="YourOrder">All Order</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
