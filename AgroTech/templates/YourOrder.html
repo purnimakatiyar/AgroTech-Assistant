@@ -1,6 +1,6 @@
-{% extends 'farmerbase.html' %}
+{% extends 'Supplierbase.html' %}
 
-{% block title %}FarmerOrder
+{% block title %}Your Order
 {% endblock title %}
 
 {% block style %}
@@ -10,10 +10,17 @@ body {
     background-attachment: fixed;
     background-size: cover;
   }
+  .bn{
+    padding: 6px 9px;
+    margin: 3px 6px;
+  }
+  .tt{
+    display : flex;
+  }
 {% endblock style %}
 
 {% block body %}
-<h1 class="text-center my-3">Supplier Order</h1>
+<h1 class="text-center my-3">All Order</h1>
 <h1 class="text-center my-3">List of Orders</h1>
 <div class="container">
     <div class="row">
@@ -33,7 +40,6 @@ body {
                                 <th>City</th>
                                 <th>State</th>
                                 <th>Zip</th>
-                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,10 +55,7 @@ body {
                                 <td>{{ord.city}}</td>
                                 <td>{{ord.state}}</td>
                                 <td>{{ord.zip}}</td>
-                                <td class="tt">
-                                    <button type="submit" class="b"><a href="https://wa.me/91{{ord.phone}}" target="_blank">Chat with the Supplier</button>
-                                    <button type="submit"><a href="/farmerDashboard" target="blank">Accept</button>
-                                </td>
+
                             </tr>
                             {% endfor %}
                         </tbody>

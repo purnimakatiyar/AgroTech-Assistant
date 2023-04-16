@@ -10,8 +10,23 @@ body {
     background-attachment: fixed;
     background-size: cover;
   }
+  #cnt{
+    height:150px;
+    width:500px;
+    margin: 250px auto;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+  }
+
+  .b{
+    margin: 4px auto;
+  }
 {% endblock style %}
 
 {% block body %}
-<h1>This is a Farmer Dashboard</h1>
+<div id="cnt">
+  <h1>Welcome to Farmer Dashboard</h1>
+  <button type="submit"><a href="/signout">Sign Out</button>
+</div>
 {% endblock body %}

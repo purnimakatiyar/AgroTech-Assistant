@@ -17,6 +17,7 @@ urlpatterns = [
     path("supplier",views.supplier,name='supplier'),
     path("PlaceOrder",views.PlaceOrder,name='PlaceOrder'),
     path("index",views.index,name='index'),
+    path("YourOrder",views.YourOrder,name='YourOrder'),
     
     path("AIF",views.AIF,name='AIF'),
     path("CFFF",views.CFFF,name='CFFF'),
